@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Christopher Loorkhoor's chemical engineering portfolio: research, projects, experience, and goals."
+    />
+    <meta name="theme-color" content="#fcfaf8" />
+    <title>Chemical Engineering Portfolio | Christopher Loorkhoor</title>
+    <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="homepage.css" rel="stylesheet" />
+  </head>
+  <body class="page-index portfolio-redesign">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ================================================================
+         HEADER AND NAVIGATION
+         ================================================================ -->
+    <header class="site-header" data-header>
+      <a class="wordmark" href="index.html" aria-label="Christopher Loorkhoor, home" aria-current="page">
+        <span class="wordmark-name">Christopher Loorkhoor</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Open navigation</span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <details class="research-nav">
+          <summary>Research</summary>
+          <div class="research-nav-pages">
+            <a href="research.html">Research Overview</a>
+            <a href="sorbents.html">CO₂ Capture and Sorbents</a>
+            <a href="catalysis.html">Catalysis and Sustainable Fuels</a>
+          </div>
+        </details>
+        <a href="projects.html">Projects</a>
+        <a href="goals.html">Goals</a>
+        <a href="resume.html">Résumé</a>
+        <a href="resume.html#contact">Contact</a>
+      </nav>
+      <!-- Search icon: links to the Projects page (there is no site search). -->
+      <a class="header-search" href="projects.html" aria-label="Browse projects">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+      </a>
+    </header>
+
+    <main id="main" class="home-main">
+      <!-- ================================================================
+           HERO
+           ================================================================ -->
+      <section class="home-hero">
+        <div class="hero-copy">
+          <p class="eyebrow-label">Chemical Engineering</p>
+          <h1>Christopher <span>Loorkhoor</span></h1>
+          <p class="hero-school">University of Houston</p>
+          <div class="hero-divider"></div>
+          <p class="hero-summary">
+            Chemical Engineering student passionate<br class="hero-br" />
+            about catalysis, sustainable process design,<br class="hero-br" />
+            and translating research into real-world impact.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="research.html">View My Work →</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <!-- HERO PORTRAIT STAGE: beige + burgundy panels sit behind the portrait (all positioned in homepage.css). -->
+          <div class="hero-stage">
+            <div class="hero-panel hero-panel--beige"></div>
+            <div class="hero-panel hero-panel--wine"></div>
+            <figure class="hero-photo">
+              <!-- IMAGE: Portrait-cutout.png is your Portrait.jpg with the background removed.
+                   To use the original photo instead, change src to assets/Portrait.jpg
+                   (it will then show its own background inside the diagonal frame). -->
+              <img class="replaceable-image" src="assets/Portrait-cutout.png" alt="Portrait of Christopher Loorkhoor" data-no-lightbox />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           ABOUT ME
+           Edit the two paragraphs below. The nav "About" link jumps here (#about).
+           ================================================================ -->
+      <section class="home-about section-shell" id="about">
+        <div class="about-heading">
+          <h2>About Me</h2>
+          <div class="about-rule"></div>
+        </div>
+        <div class="about-text">
+          <p>
+            I am a chemical engineering student interested in research, process engineering, and catalysis.
+            What draws me most to research is the opportunity to create new knowledge rather than only apply
+            what is already known. I like the idea that an experiment, model, or process can answer a question
+            that did not have a clear answer before, and that the result can become something other people build
+            on. At the same time, I want my experience in chemical engineering to extend beyond one research area.
+            Through experimental research, process simulation, computational modeling, and other projects, I have
+            tried to build a broad technical foundation and better understand how work at the laboratory scale
+            connects to larger engineering problems. That is also why I am interested in gaining more industry
+            experience before deciding exactly where I want to specialize.
+          </p>
+          <p>
+            Long term, I plan to pursue a PhD in chemical engineering, most likely in catalysis or a related area.
+            I see a PhD as an opportunity to pursue the kind of research I enjoy while also developing ideas that
+            can eventually contribute to real engineering systems and processes. My current goal is to continue
+            developing as both a researcher and an engineer, while learning enough across different areas of
+            chemical engineering to eventually be able to choose which chemical engineering problems I want to
+            work towards solving.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           RESEARCH AND ENGINEERING PROJECTS
+           ================================================================ -->
+      <section class="home-section section-shell">
+        <div class="section-heading-row">
+          <h2>Research and Engineering Projects</h2>
+          <a class="text-link" href="projects.html">View All Projects →</a>
+        </div>
+
+        <div class="project-card-grid">
+          <article class="project-card">
+            <a class="project-card-link" href="sorbents.html">
+              <span class="project-card-image">
+                <!-- Replace assets/homepage/GaZSM5.png with another approved catalysis image if desired. -->
+                <!-- IMAGE: change src to your filename; add a descriptive alt value. -->
+                <img class="replaceable-image" src="assets/Samples.png" alt="Ga-ZSM-5 catalysis poster" />
+              </span>
+              <span class="project-card-body">
+                <strong>Catalytic CO₂ Conversion</strong>
+                <span>
+                  Design and analysis of a catalytic process for converting CO₂ to <span class="nowrap">value-added</span> chemicals.
+                </span>
+               <!--<small class="tag-row">
+                  <span>Catalysis</span><span>Process Design</span><span>Simulation</span>
+                </small>-->
+              </span>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <a class="project-card-link" href="projects.html#smr">
+              <span class="project-card-image">
+                <!-- Replace assets/aspen-smr-flowsheet.png with another approved process image if desired. -->
+                <!-- IMAGE: change src to your filename; add a descriptive alt value. -->
+                <img class="replaceable-image" src="assets/aspen-smr-flowsheet.png" alt="Aspen Plus steam methane reforming flowsheet" />
+              </span>
+              <span class="project-card-body">
+                <strong>Process Optimization</strong>
+                <span>
+                  Modeling and optimization of chemical processes for improved efficiency and sustainability.
+                </span>
+                <!--<small class="tag-row">
+                  <span>Optimization</span><span>Aspen Plus</span><span>Techno-Econ</span>
+                </small>-->
+              </span>
+            </a>
+          </article>
+
+          <article class="project-card">
+            <a class="project-card-link" href="catalysis.html">
+              <span class="project-card-image">
+                <!-- Replace assets/Samples.png with another approved sorbent image if desired. -->
+                <!-- IMAGE: change src to your filename; add a descriptive alt value. -->
+                <img class="replaceable-image" src="assets/homepage/GaZSM5.png" alt="Nickel-cerium sorbent samples" />
+              </span>
+              <span class="project-card-body">
+                <strong>Sustainable Fuels Research</strong>
+                <span>
+                  Exploring catalytic routes for renewable fuels and lower emissions through reaction engineering.
+                </span>
+                <!--<small class="tag-row">
+                  <span>Renewable Fuels</span><span>Kinetics</span><span>Research</span>
+                </small>-->
+              </span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           TIMELINE
+           ================================================================ -->
+      <section class="home-section section-shell home-timeline-section">
+        <div class="section-kicker-row">
+          <p class="section-kicker">Academic &amp; Research Journey</p>
+        </div>
+        <div class="section-heading-row section-heading-row--stacked">
+          <h2>Timeline</h2>
+        </div>
+
+        <!-- TIMELINE: four milestones. Copy a <article> block to add another (also change the
+             column count in homepage.css: grid-template-columns on .mini-timeline). -->
+        <div class="mini-timeline" aria-label="Academic and research timeline">
+          <div class="timeline-line"></div>
+          <article class="timeline-step">
+            <span class="timeline-dot"></span>
+            <h3>2024</h3>
+            <strong class="timeline-title">Began Undergraduate Studies</strong>
+            <p>Began pursuing my B.S. in Chemical Engineering at the University of Houston.</p>
+          </article>
+          <article class="timeline-step">
+            <span class="timeline-dot"></span>
+            <h3>Summer 2025</h3>
+            <strong class="timeline-title">Summer Undergraduate Research Fellowship (SURF)</strong>
+            <p>Conducted research on Ga-modified ZSM-5 catalysts, investigating heterogeneous catalysis and sustainable fuel production.</p>
+          </article>
+          <article class="timeline-step">
+            <span class="timeline-dot"></span>
+            <h3>August 2025</h3>
+            <strong class="timeline-title">Began CO₂ Capture Research</strong>
+            <p>Began CO₂ adsorption research in the Bollini Research Group, including fixed-bed experiments and sorbent materials.</p>
+          </article>
+          <article class="timeline-step">
+            <span class="timeline-dot"></span>
+            <h3>Summer 2026</h3>
+            <strong class="timeline-title">UH iGEM and Continued CO₂ Capture Research</strong>
+            <p>Participated in UH iGEM computational modeling using Python and COBRApy while continuing my CO₂ adsorption research.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================================================================
+         FOOTER
+         ================================================================ -->
+    <footer class="site-footer home-footer">
+      <div class="home-footer-inner">
+        <div class="home-footer-col">
+          <strong>Christopher Loorkhoor</strong>
+          <span>Chemical Engineering Student</span>
+          <span>University of Houston</span>
+        </div>
+        <div class="home-footer-col home-footer-col--center">
+          <a href="mailto:cloorkhoor@outlook.com">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+            cloorkhoor@outlook.com
+          </a>
+          <span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-7m0 3a3 3 0 0 1 6 0v4"/></svg>
+            linkedin.com/in/cloorkhoor
+          </span>
+        </div>
+        <div class="home-footer-col home-footer-col--right">
+          <span class="home-footer-uh">University<br /><b>of Houston</b></span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

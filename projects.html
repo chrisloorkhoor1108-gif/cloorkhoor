@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- EDIT PAGE TITLE AND DESCRIPTION BELOW. Visible page text is inside <main>. -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Christopher Loorkhoor's chemical engineering portfolio: research, projects, experience, and goals." name="description"/>
+<meta content="#fcfaf8" name="theme-color"/>
+<title>Engineering Projects | Christopher Loorkhoor</title>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body class="page-projects portfolio-redesign">
+<a class="skip-link" href="#main">Skip to content</a>
+<!--
+ ================================================================
+ HEADER AND NAVIGATION — link text and destination filenames
+ ================================================================
+ -->
+<header class="site-header" data-header="">
+<a aria-label="Christopher Loorkhoor, home" class="wordmark" href="index.html">
+<span class="wordmark-name">Christopher Loorkhoor</span>
+</a>
+<button aria-controls="primary-nav" aria-expanded="false" class="menu-toggle" type="button">
+<span></span>
+<span></span>
+<span></span>
+<span class="sr-only">Open navigation</span>
+</button>
+<nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <details class="research-nav">
+          <summary>Research</summary>
+          <div class="research-nav-pages">
+            <a href="research.html">Research Overview</a>
+            <a href="sorbents.html">CO₂ Capture and Sorbents</a>
+            <a href="catalysis.html">Catalysis and Sustainable Fuels</a>
+          </div>
+        </details>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="goals.html">Goals</a>
+        <a href="resume.html">Résumé</a>
+        <a href="resume.html#contact">Contact</a>
+      </nav>
+      <!-- Search icon: links to the Projects page (there is no site search). -->
+      <a class="header-search" href="projects.html" aria-label="Browse projects">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+      </a>
+    </header>
+<!--
+ ================================================================
+ PAGE CONTENT — Engineering Projects
+ ================================================================
+ -->
+<main id="main">
+<div class="section-shell inner-page">
+<!--
+ ================================================================
+ PAGE HEADING — subtitle, main title, and opening paragraph
+ ================================================================
+ -->
+<div class="page-heading">
+<p class="eyebrow">
+            Process design and computational modeling
+          </p>
+<h1>Engineering Projects</h1>
+<p class="page-lead">
+            These projects let me work with a different kind of evidence: models that are useful
+            when their assumptions and limits are clear.
+          </p>
+</div>
+<!--
+ ================================================================
+ SECTION: Steam methane reforming in Aspen Plus
+ ================================================================
+ -->
+<section class="reading-section media-section smr-project" id="smr">
+<div class="media-layout">
+<div class="media-copy">
+<h2>Steam methane reforming in Aspen Plus</h2>
+<p class="project-date">
+                September–December 2025 · Process simulation
+              </p>
+<p>
+                I built an Aspen Plus flowsheet using RStoic reactors, flash drums, mixers, and
+                separators to model steam methane reforming and water-gas-shift conversion. The
+                five-unit design modeled approximately 1.63 × 10⁵ kg/day of hydrogen at 99.99%
+                purity, using reaction conditions in the 850–900°C range.
+              </p>
+<p>
+                Those values describe the simulated design, not an operating plant. The project
+                helped me connect individual equipment models to the overall process. A unit can
+                appear to work on its own, but its outlet becomes the next unit’s inlet, so I have
+                to think about the system as a whole. I want to keep developing that judgment as I
+                learn more about transport, control, and process design.
+              </p>
+<!--
+ ================================================================
+ TABLE — edit headings in <th> and values in <td>
+ ================================================================
+ -->
+<div class="table-wrap">
+<table>
+<caption>Simulation summary</caption>
+<thead>
+<tr>
+<th scope="col">Item</th>
+<th scope="col">Model description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Software</th>
+<td>Aspen Plus</td>
+</tr>
+<tr>
+<th scope="row">Reaction models</th>
+<td>Steam methane reforming and water-gas-shift conversion</td>
+</tr>
+<tr>
+<th scope="row">Equipment models</th>
+<td>RStoic reactors, flash drums, mixers, separators</td>
+</tr>
+<tr>
+<th scope="row">Reported design output</th>
+<td>Approximately 1.63 × 10⁵ kg/day H₂ at 99.99% purity</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="reconstruction-note">
+                I recreated the Aspen Plus model to make the process easier to show here. The
+                figures below show that reconstruction; the project summary above describes my
+                original design.
+              </p>
+</div>
+<div class="media-visual">
+<div class="smr-figures">
+<figure class="project-figure">
+<a aria-label="Open the SMR process diagram at full size in a new tab" href="assets/smr-process-diagram.png" rel="noopener noreferrer" target="_blank">
+<!-- IMAGE: change src to your filename; add a descriptive alt value. -->
+<img alt="Presentation process diagram grouping the SMR design into feed pretreatment, steam and pre-reforming, primary reforming, water-gas shift, and hydrogen purification, with a stream table and model results." decoding="async" height="1472" loading="lazy" src="assets/smr-process-diagram.png" width="2048"/>
+</a>
+<figcaption>
+<strong>Steam methane reforming process overview.</strong> Presentation diagram of the recreated model, with process stages and stream conditions. It reports approximately 1.62 × 10⁵ kg/day H₂, compared with 1.63 × 10⁵ kg/day in my original project summary.
+</figcaption>
+</figure>
+<figure class="project-figure supporting-figure">
+<a aria-label="Open the Aspen Plus flowsheet at full size in a new tab" href="assets/aspen-smr-flowsheet.png" rel="noopener noreferrer" target="_blank">
+<!-- IMAGE: change src to your filename; add a descriptive alt value. -->
+<img alt="Aspen Plus flowsheet showing natural gas pretreatment, steam mixing, pre-reforming, primary reforming, high- and low-temperature shift, water recovery, and hydrogen purification." decoding="async" height="570" loading="lazy" src="assets/aspen-smr-flowsheet.png" width="1342"/>
+</a>
+<figcaption>
+<strong>Supporting Aspen Plus screenshot.</strong> The recreated flowsheet in Aspen Plus, showing the simulation behind the process overview.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<!--
+ ================================================================
+ SECTION: UH iGEM metabolic modeling
+ ================================================================
+ -->
+<section class="reading-section media-section" id="igem">
+<div class="media-layout">
+<div class="media-copy">
+<h2>UH iGEM metabolic modeling</h2>
+<p class="project-date">
+                June–August 2026 · Python and COBRApy
+              </p>
+<p>
+                I used Python and COBRApy to compare native GltA, the R163L citrate synthase
+                variant, and feedback-insensitive CggltA across 108 modeled conditions. The model
+                predicted 74% higher average α-ketoglutarate production with R163L than with native
+                GltA.
+              </p>
+<p>
+                ...
+              </p>
+<p>
+                ...
+              </p>
+<!--
+ ================================================================
+ TABLE — edit headings in <th> and values in <td>
+ ================================================================
+ -->
+<div class="table-wrap">
+<table>
+<caption>Computational comparison</caption>
+<thead>
+<tr>
+<th scope="col">Item</th>
+<th scope="col">Scope or result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Variants</th>
+<td>Native GltA, R163L, and CggltA</td>
+</tr>
+<tr>
+<th scope="row">Conditions evaluated</th>
+<td>108 modeled conditions</td>
+</tr>
+<tr>
+<th scope="row">Reported prediction</th>
+<td>R163L: 74% higher average α-ketoglutarate production than native GltA</td>
+</tr>
+<tr>
+<th scope="row">Interpretation</th>
+<td>A computational comparison requiring experimental validation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="media-visual">
+
+<figure class="project-figure">
+<a aria-label="Open the UH iGEM model prediction plots at full size in a new tab" href="assets/IGEM_vertical_plots.png" rel="noopener noreferrer" target="_blank">
+<!-- IMAGE: change src to your filename; add a descriptive alt value. -->
+<img alt="Two stacked model-prediction plots: citrate synthase inhibition as a function of alpha-ketoglutarate and NADH; comparison of predicted alpha-ketoglutarate production for citrate synthase variants at different oxygen conditions." decoding="async" height="2705" loading="lazy" src="assets/IGEM_vertical_plots.png" width="2250"/>
+</a>
+<figcaption>
+<strong>Citrate synthase model predictions.</strong> Predicted citrate synthase inhibition and α-ketoglutarate production under modeled conditions; not experimental measurements.
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<div class="related-links">
+<a href="catalysis.html">Related catalysis work</a>
+<a href="goals.html">Research interests and goals</a>
+</div>
+</div>
+</main>
+<!--
+ ================================================================
+ FOOTER — name, email, LinkedIn, and résumé links
+ ================================================================
+ -->
+<footer class="site-footer section-shell">
+<p>
+        Christopher Loorkhoor · Chemical Engineering · University of Houston
+      </p>
+<div>
+<a href="mailto:cloorkhoor@outlook.com">Email</a> · <a href="https://www.linkedin.com/in/cloorkhoor/" rel="noopener noreferrer" target="_blank">LinkedIn</a> · <a href="resume.html">Résumé</a>
+</div>
+</footer>
+<!--
+ ================================================================
+ PAGE BEHAVIOR — shared JavaScript in script.js
+ ================================================================
+ -->
+<script src="script.js"></script>
+</body>
+</html>
