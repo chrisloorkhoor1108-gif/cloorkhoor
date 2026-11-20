@@ -12,6 +12,25 @@
     <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
     <link href="styles.css" rel="stylesheet" />
     <link href="homepage.css" rel="stylesheet" />
+    <style>
+      /* Homepage timeline links: kept here so only index.html needs updating. */
+      .page-index a.timeline-title {
+        text-decoration: underline;
+        text-decoration-color: rgba(109, 26, 54, 0.38);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.18em;
+        transition: color 160ms ease, text-decoration-color 160ms ease;
+      }
+      .page-index a.timeline-title:hover,
+      .page-index a.timeline-title:focus-visible {
+        color: var(--h-wine);
+        text-decoration-color: currentColor;
+      }
+      .page-index a.timeline-title:focus-visible {
+        outline: 2px solid var(--h-wine);
+        outline-offset: 4px;
+      }
+    </style>
   </head>
   <body class="page-index portfolio-redesign">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -204,25 +223,25 @@
           <article class="timeline-step">
             <span class="timeline-dot"></span>
             <h3>2024</h3>
-            <strong class="timeline-title">Began Undergraduate Studies</strong>
+            <a class="timeline-title" href="resume.html">Began Undergraduate Studies</a>
             <p>Began pursuing my B.S. in Chemical Engineering at the University of Houston.</p>
           </article>
           <article class="timeline-step">
             <span class="timeline-dot"></span>
             <h3>Summer 2025</h3>
-            <strong class="timeline-title">Summer Undergraduate Research Fellowship (SURF)</strong>
+            <a class="timeline-title" href="catalysis.html">Summer Undergraduate Research Fellowship (SURF)</a>
             <p>Conducted research on Ga-modified ZSM-5 catalysts, investigating heterogeneous catalysis and sustainable fuel production.</p>
           </article>
           <article class="timeline-step">
             <span class="timeline-dot"></span>
             <h3>August 2025</h3>
-            <strong class="timeline-title">Began CO₂ Capture Research</strong>
+            <a class="timeline-title" href="sorbents.html">Began CO₂ Capture Research</a>
             <p>Began CO₂ adsorption research in the Bollini Research Group, including fixed-bed experiments and sorbent materials.</p>
           </article>
           <article class="timeline-step">
             <span class="timeline-dot"></span>
             <h3>Summer 2026</h3>
-            <strong class="timeline-title">UH iGEM and Continued CO₂ Capture Research</strong>
+            <a class="timeline-title" href="projects.html#igem">UH iGEM and Continued CO₂ Capture Research</a>
             <p>Participated in UH iGEM computational modeling using Python and COBRApy while continuing my CO₂ adsorption research.</p>
           </article>
         </div>
