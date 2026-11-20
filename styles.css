@@ -2376,3 +2376,165 @@ body.portfolio-redesign::before { opacity: .055; }
 
 /* space between stacked figures in one media column (matches the SMR supporting figure) */
 .media-visual .smr-figures .project-figure + .project-figure { margin-top: 1.5rem; }
+
+
+/* =============================================================
+   RÉSUMÉ PDF PREVIEW / CONTACT PAGE — NOVEMBER 2026
+   Only applies to resume.html and contact.html.
+   ============================================================= */
+
+/* Full PDF preview: a comfortable reading width on desktops and 4K monitors. */
+.portfolio-redesign.page-resume .resume-document-section {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+.portfolio-redesign.page-resume .resume-document-heading {
+  margin-bottom: 1.3rem;
+}
+.portfolio-redesign.page-resume .resume-document-heading h2 {
+  color: var(--wine-dark);
+  font: 700 clamp(1.8rem, 2.6vw, 2.5rem)/1.2 var(--serif);
+  margin: 0 0 .35rem;
+}
+.portfolio-redesign.page-resume .resume-document-heading p {
+  margin: 0;
+  color: var(--muted);
+}
+.portfolio-redesign.page-resume .resume-preview-frame {
+  width: min(100%, 950px);
+  margin-inline: auto;
+  padding: clamp(.65rem, 1.8vw, 1.3rem);
+  background: #eeeae6;
+  border: 1px solid #ded4cd;
+  border-radius: 4px;
+  box-shadow: 0 12px 32px rgba(47,37,40,.07);
+}
+.portfolio-redesign.page-resume .resume-pdf-embed {
+  display: block;
+  width: 100%;
+  height: min(1180px, 123vw);
+  min-height: 740px;
+  border: 0;
+  background: white;
+}
+.portfolio-redesign.page-resume .resume-mobile-note {
+  max-width: 950px;
+  margin: .9rem auto 0;
+  font-size: .96rem;
+  color: var(--muted);
+}
+
+/* Contact uses the same burgundy hero as Research / Projects / Goals. */
+.portfolio-redesign.page-contact .contact-main {
+  max-width: 920px;
+  margin: 0 auto 2rem;
+}
+.portfolio-redesign.page-contact .contact-main > h2 {
+  margin: 0 0 .5rem;
+  color: var(--wine-dark);
+  font: 700 clamp(1.9rem, 3vw, 2.55rem)/1.2 var(--serif);
+}
+.portfolio-redesign.page-contact .contact-main > p {
+  margin: 0 0 1.6rem;
+  max-width: 65ch;
+  font-size: clamp(1rem, 1.15vw, 1.13rem);
+}
+.portfolio-redesign.page-contact .contact-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+.portfolio-redesign.page-contact .contact-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.4rem;
+  border: 1px solid #e1d5cf;
+  border-radius: 6px;
+  background: #fffdfb;
+  color: var(--espresso);
+  text-decoration: none;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.portfolio-redesign.page-contact .contact-option:hover {
+  border-color: var(--wine);
+  box-shadow: 0 12px 25px rgba(47,37,40,.08);
+  transform: translateY(-2px);
+}
+.portfolio-redesign.page-contact .contact-option-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 2.4rem;
+  color: var(--wine);
+}
+.portfolio-redesign.page-contact .contact-option-icon svg { width: 30px; height: 30px; }
+.portfolio-redesign.page-contact .contact-option-copy { display: grid; gap: .3rem; min-width: 0; }
+.portfolio-redesign.page-contact .contact-option-copy strong { color: var(--wine-dark); font-size: 1.24rem; }
+.portfolio-redesign.page-contact .contact-option-copy span { overflow-wrap: anywhere; font-size: .98rem; }
+.portfolio-redesign.page-contact .contact-option-arrow { margin-left: auto; align-self: start; color: var(--wine); font-size: 1.3rem; }
+
+/* Larger screens: content stays centered and readable rather than
+   stretching across a wide desktop or ultrawide monitor. */
+@media (min-width: 1600px) {
+  .portfolio-redesign:not(.page-index) .inner-page { width: min(1180px, calc(100% - 6rem)); }
+  .portfolio-redesign:not(.page-index) .page-heading .page-lead { max-width: 810px; }
+  .portfolio-redesign:not(.page-index) .reading-section p { max-width: 83ch; }
+}
+
+@media (max-width: 760px) {
+  .portfolio-redesign.page-resume .resume-preview-frame { padding: .4rem; }
+  /* Mobile browsers often render embedded PDF documents poorly.
+     The selected PDF stays available in a new tab via the fallback link. */
+  .portfolio-redesign.page-resume .resume-pdf-embed { height: 650px; min-height: 0; }
+  .portfolio-redesign.page-contact .contact-options { grid-template-columns: 1fr; }
+  .portfolio-redesign.page-contact .contact-option { padding: 1.1rem; }
+}
+@media (max-width: 480px) {
+  .portfolio-redesign.page-resume .resume-pdf-embed { height: 520px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-redesign.page-contact .contact-option { transition: none; }
+}
+
+
+/* =============================================================
+   RÉSUMÉ / CV VIEWER SWITCH — buttons share one visual style.
+   Only resume.html is affected. The existing PDF frame remains in place.
+   ============================================================= */
+.portfolio-redesign.page-resume .page-heading .document-actions .document-preview-toggle,
+.portfolio-redesign.page-resume .page-heading .document-actions .document-preview-toggle:first-child {
+  appearance: none;
+  display: inline-flex;
+  background: var(--ivory);
+  color: var(--wine-dark);
+  border: 2px solid var(--ivory);
+  border-radius: 3px;
+  cursor: pointer;
+  font: 600 1rem/1.25 var(--sans);
+  min-height: 46px;
+  padding: .7rem 1.35rem;
+  text-transform: none;
+  letter-spacing: normal;
+  box-shadow: none;
+  transition: opacity .16s ease, box-shadow .16s ease;
+}
+.portfolio-redesign.page-resume .page-heading .document-actions .document-preview-toggle[aria-pressed="true"] {
+  /* same color; thin inset accent identifies the displayed PDF */
+  box-shadow: inset 0 -4px 0 var(--wine);
+}
+.portfolio-redesign.page-resume .page-heading .document-actions .document-preview-toggle:hover {
+  opacity: .89;
+  transform: none;
+}
+.portfolio-redesign.page-resume .page-heading .document-actions .document-preview-toggle:focus-visible {
+  outline: 3px solid var(--ivory);
+  outline-offset: 4px;
+}
+.portfolio-redesign.page-resume .document-preview-help {
+  margin: -.55rem 0 1rem;
+  max-width: 950px;
+  color: var(--muted);
+  font-size: .96rem;
+}

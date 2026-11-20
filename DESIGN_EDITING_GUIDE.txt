@@ -1,0 +1,49 @@
+BURGUNDY HEADING REDESIGN — EDITING GUIDE
+
+Start by opening index.html in your browser. Every page is ordinary editable HTML/CSS.
+
+PAGE CONTENT: index.html, research.html, sorbents.html, catalysis.html,
+projects.html, resume.html, contact.html.
+
+STYLE EDITS:
+- styles.css ends with the labeled "SITE-WIDE BURGUNDY HERO REDESIGN" section.
+- homepage.css ends with "HOMEPAGE REDESIGN" styles.
+- Color palette at very top of styles.css: --wine, --wine-dark, --ivory,
+  and --espresso. Espresso is explicitly kept for the footer.
+
+PICTURES:
+- Existing linked images (including the homepage portrait, Ga-ZSM-5 image,
+  and Aspen project figures) are preserved exactly as supplied.
+- No new stock photos or fake scientific figures have been introduced.
+- Empty figure containers remain placeholders. Find the relevant <figure>
+  in the HTML page and replace the placeholder content with an <img>, e.g.
+  <img src="assets/my-real-lab-photo.jpg" alt="My laboratory setup">
+- Put the picture into the assets folder and keep the relative path intact.
+
+BUTTONS:
+- Only the Résumé page has its existing Open Resume / Open CV hero buttons.
+- Both link to the same bundled PDF files as before.
+
+Make a backup of the ZIP before making future changes.
+
+
+SITE POLISH FEATURES (script.js and end of styles.css):
+- Cross-document page transitions: native CSS @view-transition, auto fallback.
+- Scroll reveal: JS adds .polish-reveal to real sections only; no editing HTML needed.
+- Active navigation: current page (including the Research dropdown) is highlighted.
+- Lightboxes: actual PNG/JPG/WebP images in <main> open with click or Enter.
+  Add data-no-lightbox to any <img> to disable enlargement.
+  Change src and alt in the labeled image section to replace an image.
+  Blank SVG placeholders are intentionally NOT enlarged and remain blank.
+- Responsive adjustments: at end of styles.css under PROFESSIONAL POLISH.
+- Reduced motion: transitions and scroll reveal are disabled when requested by device.
+- This code does not add stock images, third-party scripts or external libraries.
+
+NOVEMBER 2026: RESUME & CONTACT
+- résumé preview lives in resume.html (.resume-pdf-embed) and points to
+  assets/Christopher_Loorkhoor_Resume.pdf. Replace that PDF in assets/ to update it.
+- Academic CV stays linked from the Resume page hero.
+- contact.html is a standalone page; edit its two .contact-option links there.
+- Contact navigation links in all HTML pages point to contact.html.
+- The relevant styling is at the end of styles.css, including @media rules.
+- The homepage wide-screen centered hero rule is at the end of homepage.css.

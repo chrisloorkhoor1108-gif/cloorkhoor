@@ -86,7 +86,7 @@ document.addEventListener('keydown', (event) => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const sitePages = new Set([
     'index.html','research.html','sorbents.html','catalysis.html',
-    'projects.html','goals.html','resume.html'
+    'projects.html','resume.html','contact.html'
   ]);
 
   // PAGE ENTRANCE / NATIVE SAME-ORIGIN DOCUMENT TRANSITIONS
@@ -100,7 +100,7 @@ document.addEventListener('keydown', (event) => {
   // ACTIVE NAVIGATION: ensure the parent Research tab is visibly selected.
   const current = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.primary-nav a').forEach(link => {
-    if ((link.getAttribute('href') || '').includes('#')) return;   // anchor links (e.g. Contact) are never the "current page"
+    if ((link.getAttribute('href') || '').includes('#')) return;   // in-page anchor links are never the "current page"
     const target = (link.getAttribute('href') || '').split('#')[0].split('/').pop();
     if (sitePages.has(target) && target === current) link.setAttribute('aria-current','page');
   });
@@ -185,4 +185,53 @@ document.addEventListener('keydown', (event) => {
   dialog.addEventListener('close', () => {opener?.focus(); big.removeAttribute('src');});
   // Native dialog already closes via Escape. Escape fallback for older browsers.
   dialog.addEventListener('keydown', e => {if(e.key === 'Escape' && dialog.open) hide();});
+})();
+
+
+// ============================================================
+// RÉSUMÉ / ACADEMIC CV VIEWER SWITCH (resume.html only)
+// The two matching hero buttons swap the existing embedded PDF.
+// Each document remains available in a new tab as a fallback.
+// ============================================================
+(() => {
+  'use strict';
+  const toggles = [...document.querySelectorAll('.document-preview-toggle')];
+  const viewer = document.querySelector('.resume-pdf-embed');
+  const title = document.getElementById('resume-document-heading');
+  const description = document.querySelector('.resume-document-heading p');
+  const help = document.getElementById('document-preview-help');
+  const externalLink = document.getElementById('document-external-link');
+  if (!toggles.length || !viewer || !title || !description || !externalLink) return;
+
+  const showDocument = key => {
+    const selected = toggles.find(button => button.dataset.document === key);
+    if (!selected) return;
+    const isCv = key === 'cv';
+    toggles.forEach(button => {
+      button.setAttribute('aria-pressed', String(button === selected));
+    });
+    title.textContent = selected.dataset.title;
+    description.textContent = isCv
+      ? 'View my complete academic CV below, including both pages.'
+      : 'View my complete one-page résumé below.';
+    if (help) help.textContent = isCv
+      ? 'Scroll inside the PDF preview to see both pages of my CV.'
+      : 'Use the document viewer to read, zoom, or print the résumé.';
+    const pdf = selected.dataset.pdf;
+    // Do not reload the PDF when its corresponding button is already selected.
+    if (viewer.getAttribute('src') !== `${pdf}#view=FitH`) {
+      viewer.setAttribute('src', `${pdf}#view=FitH`);
+    }
+    viewer.setAttribute('title', `Christopher Loorkhoor — ${selected.dataset.title} (PDF)`);
+    externalLink.href = pdf;
+    externalLink.textContent = isCv
+      ? 'open the academic CV in a new tab'
+      : 'open the résumé in a new tab';
+  };
+
+  toggles.forEach(button => button.addEventListener('click', () => {
+    showDocument(button.dataset.document);
+  }));
+  // A direct link to resume.html#cv can optionally open the CV preview.
+  if (location.hash === '#cv') showDocument('cv');
 })();

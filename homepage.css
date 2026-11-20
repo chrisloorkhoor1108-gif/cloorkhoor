@@ -463,3 +463,17 @@
   .page-index .timeline-dot { top: .15rem; left: -1.6rem; width: 12px; height: 12px; }
   .page-index .section-heading-row { flex-wrap: wrap; }
 }
+
+
+/* ============================================================
+   WIDE SCREEN RESPONSIVENESS — NOVEMBER 2026
+   At 1920px / 2560px / 4K, the editorial hero stays a bounded,
+   centered composition; it should not stretch across the entire monitor.
+   Smaller breakpoints above remain unchanged.
+   ============================================================ */
+@media (min-width: 1600px) {
+  .page-index .home-hero {
+    width: min(100%, 1680px);
+    margin-inline: auto;
+  }
+}
