@@ -212,11 +212,11 @@ document.addEventListener('keydown', (event) => {
     });
     title.textContent = selected.dataset.title;
     description.textContent = isCv
-      ? 'View my complete academic CV below, including both pages.'
-      : 'View my complete one-page résumé below.';
+      ? 'View my academic CV below.'
+      : 'View my one-page résumé below.';
     if (help) help.textContent = isCv
-      ? 'Scroll inside the PDF preview to see both pages of my CV.'
-      : 'Use the document viewer to read, zoom, or print the résumé.';
+      ? 'Scroll inside the PDF preview to see my CV.'
+      : '';
     const pdf = selected.dataset.pdf;
     // Do not reload the PDF when its corresponding button is already selected.
     if (viewer.getAttribute('src') !== `${pdf}#view=FitH`) {
